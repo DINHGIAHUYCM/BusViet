@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "485306254074",
+    "firebase_url": "https://busviet-23bf9-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "busviet-23bf9",
+    "storage_bucket": "busviet-23bf9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485306254074:android:bb91e1a4f1f9358ddbff43",
+        "android_client_info": {
+          "package_name": "com.busviet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACvddr4PULJXs_AdD_vZxU4XrQz7Ea67o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
