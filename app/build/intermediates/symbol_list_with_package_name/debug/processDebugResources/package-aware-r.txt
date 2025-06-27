@@ -1451,6 +1451,9 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gray
+color green_light
+color green_primary
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -2129,6 +2132,7 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color text_dark
 color tooltip_background_dark
 color tooltip_background_light
 color white
@@ -3051,6 +3055,7 @@ drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
+drawable ic_bus_logo
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -3059,6 +3064,7 @@ drawable ic_call_decline
 drawable ic_call_decline_low
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
+drawable ic_google
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -3070,6 +3076,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
+drawable ic_success
 drawable indeterminate_static
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3143,6 +3150,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable rounded_edittext
+drawable rounded_green_button
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3249,12 +3258,16 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnGetStarted
 id btnLogin
+id btnSignUp
 id buttonPanel
 id cache_measures
 id callMeasure
 id cancel_button
 id carryVelocity
+id cbAgree
+id cbRememberMe
 id center
 id centerCrop
 id centerInside
@@ -3333,10 +3346,10 @@ id endToStart
 id enterAlways
 id enterAlwaysCollapsed
 id escape
-id etContact
+id etEmail
+id etName
 id etPassword
 id etPhone
-id etUsername
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3402,7 +3415,6 @@ id linear
 id listMode
 id list_item
 id m3_side_sheet
-id main
 id marquee
 id masked
 id match_constraint
@@ -3638,6 +3650,9 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvAlreadyHaveAccount
+id tvCreateAccount
+id tvLoginLink
 id tvStatus
 id unchecked
 id uniform
@@ -3780,7 +3795,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_login
 layout activity_main
+layout activity_register
+layout activity_success
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
