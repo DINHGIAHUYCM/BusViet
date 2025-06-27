@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="gray">#888888</color>
+    <color name="green_light">#DFF5E1</color>
+    <color name="green_primary">#007A33</color>
+    <color name="text_dark">#0D1B2A</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">BusViet</string>
     <string name="firebase_database_url" translatable="false">https://busviet-23bf9-default-rtdb.asia-southeast1.firebasedatabase.app</string>

@@ -1,16 +1,18 @@
 package com.busviet;
 
 public class User {
+    public String userName;
     public String password;
-    public String contact;
+    public String email;
     public String phone;
 
     public User() {
     }
 
-    public User(String password, String contact, String phone) {
+    public User(String password, String email, String phone, String userName) {
         this.password = password;
-        this.contact = contact;
+        this.email = email;
         this.phone = phone;
+        this.userName = userName;
     }
 }

@@ -41,6 +41,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.busviet.LoginActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.busviet.RegisterActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.busviet.SuccessActivity"
+            android:exported="true" >
+        </activity>
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
