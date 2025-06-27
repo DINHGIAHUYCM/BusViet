@@ -1,0 +1,84 @@
+# ========================
+# Android Studio
+# ========================
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+
+# ========================
+# Build / Output
+# ========================
+/build
+/captures
+.externalNativeBuild
+/.cxx
+*/build/
+*/intermediates/
+/outputs/
+/generated/
+
+# ========================
+# Gradle
+# ========================
+.gradle/
+build/
+!gradle-wrapper.jar
+
+# ========================
+# Signing / Keystore
+# ========================
+*.jks
+*.keystore
+*.pem
+*.key
+/signing.properties
+
+# ========================
+# Firebase / Google Services
+# ========================
+google-services.json
+firebase-debug.log
+
+# ========================
+# VS Code / IntelliJ
+# ========================
+.vscode/
+*.swp
+*.swo
+*.tmp
+
+# ========================
+# Log files
+# ========================
+*.log
+
+# ========================
+# OS-specific
+# ========================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.orig
+
+# ========================
+# Test coverage
+# ========================
+/coverage/
+*.ec
+*.exec
+
+# ========================
+# Misc
+# ========================
+.idea/
+*.apk
+*.ap_
+*.aar
+*.lock
