@@ -32,6 +32,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.BusViet" >
+
+        <!-- Giao diện đăng nhập -->
         <activity
             android:name="com.busviet.MainActivity"
             android:exported="true" >
@@ -41,6 +43,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Giao diện chính sau khi đăng nhập -->
+        <activity android:name="com.busviet.HomeActivity" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"

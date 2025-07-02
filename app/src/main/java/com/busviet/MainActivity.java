@@ -1,5 +1,6 @@
 package com.busviet;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -47,10 +48,13 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
                     if (snapshot.exists()) {
-                        // Tài khoản tồn tại → kiểm tra mật khẩu
                         User user = snapshot.getValue(User.class);
                         if (user != null && user.password.equals(password)) {
-                            tvStatus.setText("✅ Đăng nhập thành công\n📍 Địa chỉ: " + user.contact + "\n📞 SĐT: " + user.phone);
+                            // Đăng nhập thành công → chuyển sang HomeActivity
+                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                            intent.putExtra("username", username);
+                            startActivity(intent);
+                            finish();
                         } else {
                             tvStatus.setText("❌ Sai mật khẩu!");
                         }
