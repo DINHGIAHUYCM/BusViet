@@ -1,43 +1,35 @@
 [
     {
-        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
         "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\xml\\data_extraction_rules.xml"
-    },
-    {
-        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\drawable_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\layout_fragment_bus_routes.xml.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\layout\\fragment_bus_routes.xml"
     },
     {
         "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
@@ -48,20 +40,68 @@
         "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\layout\\fragment_profile.xml"
     },
     {
         "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.busviet.app-debug-36:/layout_activity_main.xml.flat",
-        "source": "com.busviet.app-main-38:/layout/activity_main.xml"
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\drawable_ic_profile.png.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\drawable\\ic_profile.png"
     },
     {
         "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\drawable_ic_bus.png.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\drawable\\ic_bus.png"
+    },
+    {
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\drawable_ic_buy.png.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\drawable\\ic_buy.png"
+    },
+    {
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\layout_fragment_buy_ticket.xml.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\layout\\fragment_buy_ticket.xml"
+    },
+    {
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\layout_fragment_ticket_manager.xml.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\layout\\fragment_ticket_manager.xml"
+    },
+    {
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\drawable_ic_ticket.png.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\drawable\\ic_ticket.png"
+    },
+    {
+        "merged": "com.busviet.app-debug-36:/layout_fragment_profile.xml.flat",
+        "source": "com.busviet.app-main-38:/layout/fragment_profile.xml"
     },
     {
         "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-xxhdpi_ic_launcher.webp.flat",
@@ -70,5 +110,9 @@
     {
         "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-debug-36:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\dinhg\\.gradle\\daemon\\8.11.1\\com.busviet.app-main-38:\\layout\\activity_home.xml"
     }
 ]

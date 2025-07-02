@@ -21,25 +21,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\dinhg\\Desktop\\PRM\\BusViet\\app\\src\\main\\res\\values-night\\themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "100",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "314"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "165"
-                    }
-                },
-                {
                     "source": "C:\\Users\\dinhg\\.gradle\\caches\\8.11.1\\transforms\\b2404fb5500d7c1b743e8b6467c3a4f6\\transformed\\appcompat-1.7.1\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
@@ -54,6 +35,25 @@
                         "startOffsets": "170,240,324,408,504,606,708,3690",
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "235,319,403,499,601,703,797,3774"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\dinhg\\Desktop\\PRM\\BusViet\\BusViet\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "102",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "319"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "165"
                     }
                 }
             ]
