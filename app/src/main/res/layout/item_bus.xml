@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_card_white"
+    android:elevation="4dp">
+
+    <TextView
+        android:id="@+id/tvRouteCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mã tuyến"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/tvRoute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Điểm đầu ➜ Điểm cuối"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giá vé"
+        android:textSize="16sp"
+        android:layout_marginTop="2dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trạng thái"
+        android:textSize="16sp"
+        android:layout_marginTop="2dp" />
+
+    <!-- Hành động dành cho admin -->
+    <LinearLayout
+        android:id="@+id/adminActions"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:gravity="end"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✏️ Sửa" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🗑️ Xóa"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Nút mua vé cho người dùng -->
+    <Button
+        android:id="@+id/btnBuy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mua vé"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" />
+</LinearLayout>
