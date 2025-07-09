@@ -3081,6 +3081,7 @@ drawable ic_profile
 drawable ic_search_black_24
 drawable ic_ticket
 drawable indeterminate_static
+drawable layout_bus
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3262,10 +3263,12 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btnBuy
+id btnBuyTicket
 id btnCreate
 id btnDelete
 id btnEdit
 id btnLogin
+id btnLogout
 id btnSave
 id buttonPanel
 id cache_measures
@@ -3356,6 +3359,7 @@ id etPassword
 id etPhone
 id etRouteCode
 id etStartPoint
+id etTicketCount
 id etUsername
 id exitUntilCollapsed
 id expand_activities_button
@@ -3415,6 +3419,7 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutContent
 id left
 id leftToRight
 id legacy
@@ -3602,6 +3607,8 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinnerRoute
+id spinnerTicketType
 id spline
 id split_action_bar
 id spread
@@ -3678,6 +3685,8 @@ id tvPrice
 id tvRoute
 id tvRouteCode
 id tvStatus
+id tvTitle
+id tvTotalPrice
 id tvUserInfo
 id tvWelcome
 id unchecked
