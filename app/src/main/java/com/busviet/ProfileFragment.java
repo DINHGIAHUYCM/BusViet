@@ -5,6 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.content.Intent;
+import android.widget.Button;
+
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,7 +20,9 @@ public class ProfileFragment extends Fragment {
     private DatabaseReference usersRef;
     private String username;
 
+
     public ProfileFragment() {}
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,14 +52,24 @@ public class ProfileFragment extends Fragment {
                 } else {
                     tvInfo.setText("❌ Không tìm thấy thông tin người dùng.");
                 }
+
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 tvInfo.setText("⚠️ Lỗi khi tải dữ liệu: " + error.getMessage());
             }
+
         });
 
+        Button btnEdit = view.findViewById(R.id.btnEditUser);
+
+        btnEdit.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), UpdateUserActivity.class);
+            intent.putExtra("username", username);
+            startActivity(intent);
+        });
         return view;
     }
 }

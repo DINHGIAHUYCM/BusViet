@@ -1,10 +1,13 @@
 R_DEF: Internal format may change without notice
 local
+array ticket_types
 color black
 color white
 drawable bg_card_white
 drawable bg_gradient
 drawable bg_white_rounded
+drawable card_background
+drawable edit_text_bg
 drawable ic_app_logo
 drawable ic_bus
 drawable ic_buy
@@ -20,8 +23,16 @@ id btnBuy
 id btnCreate
 id btnDelete
 id btnEdit
+id btnEditUser
+id btnHistory
 id btnLogin
 id btnSave
+id buttonBack
+id buttonUpdate
+id editContact
+id editPassword
+id editPhone
+id editRePassword
 id etContact
 id etEndPoint
 id etPassword
@@ -44,7 +55,12 @@ id rbPrice250
 id rgPrice
 id rgRole
 id rvBusList
+id showPass
+id showRePass
 id switchActive
+id textHome
+id ticketRecyclerView
+id ticketTypeSpinner
 id tvAppTitle
 id tvPrice
 id tvRoute
@@ -52,8 +68,14 @@ id tvRouteCode
 id tvStatus
 id tvUserInfo
 id tvWelcome
+id txtPurchaseDate
+id txtRouteCode
+id txtTicketType
 layout activity_home
 layout activity_main
+layout activity_ticket_detail
+layout activity_ticket_history
+layout activity_update_user
 layout dialog_edit_bus
 layout fragment_bus_routes
 layout fragment_buy_ticket
@@ -62,6 +84,7 @@ layout fragment_home
 layout fragment_profile
 layout fragment_ticket_manager
 layout item_bus
+layout item_ticket
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round

@@ -4,7 +4,6 @@
     package="com.busviet">
 
     <application
-        android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -26,6 +25,9 @@
 
         <!-- Giao diện chính sau khi đăng nhập -->
         <activity android:name=".HomeActivity" />
+        <activity android:name=".UpdateUserActivity"/>
+        <activity android:name=".TicketDetailActivity"/>
+        <activity android:name=".TicketHistoryActivity"/>
 
     </application>
 

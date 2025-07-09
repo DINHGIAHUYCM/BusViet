@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">BusViet</string>
+    <string name="app_name">Bus Ticket App</string>
+
+    <string-array name="ticket_types">
+        <item>All</item>
+        <item>Monthly Pass</item>
+        <item>Single Ticket</item>
+    </string-array>
+
 </resources>

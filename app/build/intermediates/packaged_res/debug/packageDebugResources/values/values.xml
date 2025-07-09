@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="ticket_types">
+        <item>All</item>
+        <item>Monthly Pass</item>
+        <item>Single Ticket</item>
+    </string-array>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <string name="app_name">BusViet</string>
+    <string name="app_name">Bus Ticket App</string>
     <string name="firebase_database_url" translatable="false">https://busviet-23bf9-default-rtdb.asia-southeast1.firebasedatabase.app</string>
     <string name="gcm_defaultSenderId" translatable="false">485306254074</string>
     <string name="google_api_key" translatable="false">AIzaSyACvddr4PULJXs_AdD_vZxU4XrQz7Ea67o</string>

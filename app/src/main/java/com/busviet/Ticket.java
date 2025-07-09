@@ -1,14 +1,16 @@
 package com.busviet;
 
 public class Ticket {
-    public int remaining;
-    public String expireDate; // ISO-8601 format: yyyy-MM-dd
+    public long expireDate;
+    public boolean isValid;
+    public long purchaseDate;
+    public String purchaseMonth;
+    public String routeCode;
+    public int ticketCount;
+    public String ticketType;
+    public int totalPrice;
+    public String username;
+    public boolean validInCurrentMonth;
 
-    public Ticket() {
-    }
-
-    public Ticket(int remaining, String expireDate) {
-        this.remaining = remaining;
-        this.expireDate = expireDate;
-    }
+    public Ticket() {} // cần constructor rỗng cho Firebase
 }
