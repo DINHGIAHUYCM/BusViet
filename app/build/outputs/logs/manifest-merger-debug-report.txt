@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-35:12
 MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Admin\.gradle\caches\8.11.1\transforms\9594ad0c8256a91b96b9aa54a4c96f2c\transformed\firebase-database-21.0.0\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Admin\.gradle\caches\8.11.1\transforms\16ea4f758f676e4ea6e0eda5796c257a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Admin\.gradle\caches\8.11.1\transforms\2764b2d45b753c53e613b24da412dfc3\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
@@ -74,8 +74,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\Admin\.
 	xmlns:android
 		ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:6:5-32:19
-INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:6:5-32:19
+ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:6:5-33:19
+INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:6:5-33:19
 MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Admin\.gradle\caches\8.11.1\transforms\9594ad0c8256a91b96b9aa54a4c96f2c\transformed\firebase-database-21.0.0\AndroidManifest.xml:25:5-36:19
 MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Admin\.gradle\caches\8.11.1\transforms\9594ad0c8256a91b96b9aa54a4c96f2c\transformed\firebase-database-21.0.0\AndroidManifest.xml:25:5-36:19
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Admin\.gradle\caches\8.11.1\transforms\16ea4f758f676e4ea6e0eda5796c257a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19

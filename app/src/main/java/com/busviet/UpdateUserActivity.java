@@ -25,7 +25,7 @@ public class UpdateUserActivity extends AppCompatActivity {
 
     EditText editName, editEmail, editPhone, editContact, editPassword, editRePassword;
     Button buttonUpdate, buttonBack;
-    TextView textHome;
+
     ImageView showPass, showRePass;
 
     FirebaseAuth auth;
@@ -45,7 +45,7 @@ public class UpdateUserActivity extends AppCompatActivity {
         editRePassword = findViewById(R.id.editRePassword);
         buttonUpdate = findViewById(R.id.buttonUpdate);
         buttonBack = findViewById(R.id.buttonBack);
-        textHome = findViewById(R.id.textHome);
+
         showPass = findViewById(R.id.showPass);
         showRePass = findViewById(R.id.showRePass);
 
@@ -86,11 +86,6 @@ public class UpdateUserActivity extends AppCompatActivity {
 
         buttonBack.setOnClickListener(v -> finish());
 
-        textHome.setOnClickListener(v -> {
-            Intent intent = new Intent(UpdateUserActivity.this, MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-        });
     }
 
     private void loadUserData() {

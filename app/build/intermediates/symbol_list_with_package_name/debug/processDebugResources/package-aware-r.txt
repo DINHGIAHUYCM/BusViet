@@ -3034,6 +3034,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable btn_rounded_blue
 drawable card_background
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -3162,6 +3163,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable spinner_dropdown_bg
+drawable spinner_rounded
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3275,6 +3278,7 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnBack
 id btnBuy
 id btnCreate
 id btnDelete
@@ -3282,6 +3286,7 @@ id btnEdit
 id btnEditUser
 id btnHistory
 id btnLogin
+id btnRipeTicket
 id btnSave
 id buttonBack
 id buttonPanel
@@ -3667,7 +3672,6 @@ id tag_window_insets_animation_callback
 id text
 id text2
 id textEnd
-id textHome
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -3709,9 +3713,24 @@ id tvRouteCode
 id tvStatus
 id tvUserInfo
 id tvWelcome
+id txtDetailExpireDate
+id txtDetailIsValid
+id txtDetailPurchaseDate
+id txtDetailPurchaseMonth
+id txtDetailRouteCode
+id txtDetailTicketCount
+id txtDetailTicketType
+id txtDetailTotalPrice
+id txtDetailUsername
+id txtDetailValidInMonth
+id txtIsValid
 id txtPurchaseDate
+id txtRoute
 id txtRouteCode
+id txtStatus
+id txtTicketCount
 id txtTicketType
+id txtValidInCurrentMonth
 id unchecked
 id uniform
 id unlabeled

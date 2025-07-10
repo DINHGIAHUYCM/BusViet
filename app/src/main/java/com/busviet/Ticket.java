@@ -1,6 +1,8 @@
 package com.busviet;
 
-public class Ticket {
+import java.io.Serializable;
+
+public class Ticket implements Serializable {
     public long expireDate;
     public boolean isValid;
     public long purchaseDate;
@@ -12,5 +14,6 @@ public class Ticket {
     public String username;
     public boolean validInCurrentMonth;
 
-    public Ticket() {} // cần constructor rỗng cho Firebase
+    public Ticket() {
+    }
 }
