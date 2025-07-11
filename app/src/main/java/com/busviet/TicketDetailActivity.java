@@ -5,9 +5,27 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.MutableData;
+import com.google.firebase.database.Transaction;
+import com.google.firebase.database.ValueEventListener;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 import java.util.Date;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import android.app.AlertDialog;
+import android.widget.Toast;
+
 
 public class TicketDetailActivity extends AppCompatActivity {
 
@@ -54,6 +72,82 @@ public class TicketDetailActivity extends AppCompatActivity {
         // Nút quay lại
         Button btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> finish());
+
+        Button btnRipeTicket = findViewById(R.id.btnRipeTicket);
+
+        btnRipeTicket.setOnClickListener(v -> {
+            if (ticket.ticketCount <= 0) {
+                Toast.makeText(this, "Không thể xé vé vì số lượng còn lại là 0", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            new AlertDialog.Builder(this)
+                    .setTitle("Xác nhận xé vé")
+                    .setMessage("Bạn có chắc chắn muốn xé vé này không?")
+                    .setPositiveButton("Có", (dialog, which) -> {
+                        DatabaseReference purchasesRef = FirebaseDatabase.getInstance()
+                                .getReference("purchases");
+
+                        purchasesRef.orderByChild("username")
+                                .equalTo(ticket.username)
+                                .addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        for (DataSnapshot ticketSnapshot : snapshot.getChildren()) {
+                                            Ticket found = ticketSnapshot.getValue(Ticket.class);
+
+                                            if (found != null
+                                                    && found.routeCode.equals(ticket.routeCode)
+                                                    && found.ticketType.equals(ticket.ticketType)) {
+
+                                                // Đã tìm đúng vé cần xé
+                                                DatabaseReference targetRef = ticketSnapshot.getRef();
+
+                                                targetRef.runTransaction(new Transaction.Handler() {
+                                                    @NonNull
+                                                    @Override
+                                                    public Transaction.Result doTransaction(@NonNull MutableData currentData) {
+                                                        Ticket t = currentData.getValue(Ticket.class);
+                                                        if (t == null) return Transaction.success(currentData);
+
+                                                        if (t.ticketCount > 0) {
+                                                            t.ticketCount -= 1;
+                                                            currentData.setValue(t);
+                                                        }
+                                                        return Transaction.success(currentData);
+                                                    }
+
+                                                    @Override
+                                                    public void onComplete(@Nullable DatabaseError error, boolean committed, @Nullable DataSnapshot currentData) {
+                                                        if (committed && currentData != null) {
+                                                            Ticket updated = currentData.getValue(Ticket.class);
+                                                            if (updated != null) {
+                                                                ticket.ticketCount = updated.ticketCount;
+                                                                Toast.makeText(TicketDetailActivity.this, "Xé vé thành công!", Toast.LENGTH_SHORT).show();
+                                                                recreate(); // Reload lại UI
+                                                            }
+                                                        } else {
+                                                            Toast.makeText(TicketDetailActivity.this, "Xé vé thất bại!", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    }
+                                                });
+
+                                                break; // chỉ cần xử lý một vé
+                                            }
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+                                        Toast.makeText(TicketDetailActivity.this, "Lỗi đọc dữ liệu: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                    })
+                    .setNegativeButton("Không", null)
+                    .show();
+        });
+
+
 
     }
 }
