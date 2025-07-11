@@ -126,10 +126,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="711c7996-fe9a-4ff5-bd48-aec603812678" name="Changes" comment="Update Main Profile">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/busviet/TicketDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/busviet/TicketDetailActivity.java" afterDir="false" />
-    </list>
+    <list default="true" id="711c7996-fe9a-4ff5-bd48-aec603812678" name="Changes" comment="Update Main Profile" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
