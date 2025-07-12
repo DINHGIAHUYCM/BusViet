@@ -5,6 +5,8 @@ color white
 drawable bg_card_white
 drawable bg_gradient
 drawable bg_white_rounded
+drawable btn_rounded_blue
+drawable edit_text_bg
 drawable ic_app_logo
 drawable ic_bus
 drawable ic_buy
@@ -22,9 +24,16 @@ id btnBuyTicket
 id btnCreate
 id btnDelete
 id btnEdit
+id btnEditUser
 id btnLogin
 id btnLogout
 id btnSave
+id buttonBack
+id buttonUpdate
+id editContact
+id editPassword
+id editPhone
+id editRePassword
 id etContact
 id etEndPoint
 id etPassword
@@ -49,6 +58,8 @@ id rbPrice250
 id rgPrice
 id rgRole
 id rvBusList
+id showPass
+id showRePass
 id spinnerRoute
 id spinnerTicketType
 id switchActive
@@ -63,6 +74,7 @@ id tvUserInfo
 id tvWelcome
 layout activity_home
 layout activity_main
+layout activity_update_user
 layout dialog_edit_bus
 layout fragment_bus_routes
 layout fragment_buy_ticket

@@ -38,6 +38,16 @@
     </LinearLayout>
 
     <!-- Logout Button -->
+
+    <Button android:id="@+id/btnEditUser"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Chỉnh sửa thông tin"
+        android:backgroundTint="#E53935"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:drawablePadding="8dp"/>
+
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="match_parent"

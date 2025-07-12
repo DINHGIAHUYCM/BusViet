@@ -34,6 +34,7 @@
 
         <!-- Giao diện chính sau khi đăng nhập -->
         <activity android:name=".HomeActivity" />
+        <activity android:name=".UpdateUserActivity"/>
 
     </application>
 
