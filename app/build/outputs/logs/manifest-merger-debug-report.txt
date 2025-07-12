@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:2:1-43:12
 MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Admin\.gradle\caches\8.11.1\transforms\9594ad0c8256a91b96b9aa54a4c96f2c\transformed\firebase-database-21.0.0\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\Admin\.gradle\caches\8.11.1\transforms\cf7e98ca3833dded7d52beaa17489085\transformed\firebase-auth-22.3.0\AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Admin\.gradle\caches\8.11.1\transforms\2764b2d45b753c53e613b24da412dfc3\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
@@ -85,8 +85,8 @@ ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:7:5-12:36
 	android:anyDensity
 		ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:12:9-34
 application
-ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:14:5-39:19
-INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:14:5-39:19
+ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:14:5-41:19
+INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:14:5-41:19
 MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Admin\.gradle\caches\8.11.1\transforms\9594ad0c8256a91b96b9aa54a4c96f2c\transformed\firebase-database-21.0.0\AndroidManifest.xml:25:5-36:19
 MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Admin\.gradle\caches\8.11.1\transforms\9594ad0c8256a91b96b9aa54a4c96f2c\transformed\firebase-database-21.0.0\AndroidManifest.xml:25:5-36:19
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\Admin\.gradle\caches\8.11.1\transforms\cf7e98ca3833dded7d52beaa17489085\transformed\firebase-auth-22.3.0\AndroidManifest.xml:28:5-73:19
@@ -169,6 +169,10 @@ activity#com.busviet.UpdateUserActivity
 ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:37:9-55
 	android:name
 		ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:37:19-53
+activity#com.busviet.TicketDetailActivity
+ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:38:9-58
+	android:name
+		ADDED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml:38:19-55
 uses-sdk
 INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\PRM\BusViet\app\src\main\AndroidManifest.xml

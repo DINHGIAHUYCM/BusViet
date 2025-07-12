@@ -3275,6 +3275,7 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnBack
 id btnBuy
 id btnBuyTicket
 id btnCreate
@@ -3283,6 +3284,7 @@ id btnEdit
 id btnEditUser
 id btnLogin
 id btnLogout
+id btnRipeTicket
 id btnSave
 id buttonBack
 id buttonPanel
@@ -3711,6 +3713,15 @@ id tvTitle
 id tvTotalPrice
 id tvUserInfo
 id tvWelcome
+id txtDetailExpireDate
+id txtDetailPurchaseDate
+id txtDetailRouteCode
+id txtDetailTicketCount
+id txtDetailTicketType
+id txtDetailTotalPrice
+id txtDetailUsername
+id txtRoute
+id txtStatus
 id unchecked
 id uniform
 id unlabeled
@@ -3854,6 +3865,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_home
 layout activity_main
+layout activity_ticket_detail
 layout activity_update_user
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row

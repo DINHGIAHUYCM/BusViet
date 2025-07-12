@@ -19,6 +19,7 @@ drawable ic_ticket
 drawable layout_bus
 id adminActions
 id bottom_nav
+id btnBack
 id btnBuy
 id btnBuyTicket
 id btnCreate
@@ -27,6 +28,7 @@ id btnEdit
 id btnEditUser
 id btnLogin
 id btnLogout
+id btnRipeTicket
 id btnSave
 id buttonBack
 id buttonUpdate
@@ -72,8 +74,18 @@ id tvTitle
 id tvTotalPrice
 id tvUserInfo
 id tvWelcome
+id txtDetailExpireDate
+id txtDetailPurchaseDate
+id txtDetailRouteCode
+id txtDetailTicketCount
+id txtDetailTicketType
+id txtDetailTotalPrice
+id txtDetailUsername
+id txtRoute
+id txtStatus
 layout activity_home
 layout activity_main
+layout activity_ticket_detail
 layout activity_update_user
 layout dialog_edit_bus
 layout fragment_bus_routes
