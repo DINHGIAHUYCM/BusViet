@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.busviet">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <!-- Hỗ trợ nhiều loại màn hình -->
     <supports-screens
         android:smallScreens="true"
@@ -22,6 +27,9 @@
         android:theme="@style/Theme.BusViet"
         tools:targetApi="31">
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDodq43WJMoePSko6uJ8hh6kqYXfDONJXI" />
         <!-- Giao diện đăng nhập -->
         <activity
             android:name=".MainActivity"

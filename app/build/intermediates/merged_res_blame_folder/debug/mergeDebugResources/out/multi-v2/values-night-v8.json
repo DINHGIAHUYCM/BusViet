@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.busviet.app-mergeDebugResources-35:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.busviet.app-mergeDebugResources-39:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "D:\\PRM\\BusViet\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "D:\\Android\\BusViet\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
