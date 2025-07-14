@@ -16,6 +16,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        flatDir {
+            dirs("app/Libs") // 👈 thêm dòng này để Gradle tìm file .aar
+        }
     }
 }
 

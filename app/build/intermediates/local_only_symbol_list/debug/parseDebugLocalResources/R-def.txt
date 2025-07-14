@@ -61,8 +61,10 @@ id tvTitle
 id tvTotalPrice
 id tvUserInfo
 id tvWelcome
+id webViewPayment
 layout activity_home
 layout activity_main
+layout activity_payment
 layout dialog_edit_bus
 layout fragment_bus_routes
 layout fragment_buy_ticket
@@ -86,3 +88,4 @@ style Base.Theme.BusViet
 style Theme.BusViet
 xml backup_rules
 xml data_extraction_rules
+xml network_security_config

@@ -3429,6 +3429,8 @@ id line3
 id linear
 id listMode
 id list_item
+id llError
+id llLoading
 id m3_side_sheet
 id marquee
 id masked
@@ -3547,6 +3549,7 @@ id pin
 id position
 id postLayout
 id pressed
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -3681,6 +3684,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvAppTitle
+id tvError
 id tvPrice
 id tvRoute
 id tvRouteCode
@@ -3705,6 +3709,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id webViewPayment
 id west
 id wide
 id withText
@@ -3713,6 +3718,7 @@ id withinBounds
 id wrap
 id wrap_content
 id wrap_content_constrained
+id wview1
 id x_left
 id x_right
 integer abc_config_activityDefaultDur
@@ -3832,6 +3838,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_home
 layout activity_main
+layout activity_payment
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3919,6 +3926,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout vnp_activity_webview
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -4116,6 +4124,8 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string vnp_app_name
+string vnp_lable_XinDoiTrongGiayLat
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -5402,3 +5412,4 @@ styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration
 styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
+xml network_security_config
