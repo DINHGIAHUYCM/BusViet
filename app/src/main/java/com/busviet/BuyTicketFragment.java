@@ -291,16 +291,31 @@ public class BuyTicketFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1234) {
             if (resultCode == PaymentActivity.RESULT_OK) {
+
+                if (etTicketCount == null || spinnerRoute == null || spinnerTicketType == null || busList == null || busList.isEmpty()) {
+                    Toast.makeText(requireContext(), "Dữ liệu không hợp lệ. Vui lòng thử lại.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 String countStr = etTicketCount.getText().toString().trim();
                 int ticketCount = countStr.isEmpty() ? 1 : Integer.parseInt(countStr);
+
                 int routePosition = spinnerRoute.getSelectedItemPosition();
+                if (routePosition < 0 || routePosition >= busList.size()) {
+                    Toast.makeText(requireContext(), "Tuyến xe không hợp lệ", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 Bus selectedBus = busList.get(routePosition);
+
                 int typePosition = spinnerTicketType.getSelectedItemPosition();
                 String ticketType = getTicketTypeKey(typePosition);
                 int ticketPrice = getTicketPrice(typePosition);
+
                 long currentTime = System.currentTimeMillis();
                 long expireTime = calculateExpireDate(ticketType, currentTime);
                 int totalPrice = ticketPrice * ticketCount;
+
                 savePurchaseToFirebase(
                         username,
                         selectedBus.routeCode,
@@ -311,10 +326,13 @@ public class BuyTicketFragment extends Fragment {
                         totalPrice
                 );
             } else {
-                Toast.makeText(requireContext(), "Thanh toán thất bại hoặc bị huỷ", Toast.LENGTH_SHORT).show();
+                if (getContext() != null) {
+                    Toast.makeText(getContext(), "Thanh toán thất bại hoặc bị huỷ", Toast.LENGTH_SHORT).show();
+                }
             }
         }
     }
+
 
     private void savePurchaseToFirebase(
             String username,
