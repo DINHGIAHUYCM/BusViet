@@ -1,14 +1,23 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color gray
+color green_light
+color green_primary
+color light_green_background
+color nav_item_color
+color text_dark
 color white
+drawable bg_bottom_nav_rounded_green
 drawable bg_card_white
 drawable bg_gradient
+drawable bg_square_button
 drawable bg_white_rounded
 drawable btn_rounded_blue
 drawable edit_text_bg
 drawable ic_app_logo
 drawable ic_bus
+drawable ic_bus_logo
 drawable ic_buy
 drawable ic_eye_closed
 drawable ic_eye_open
@@ -16,7 +25,10 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_profile
 drawable ic_ticket
+drawable img_bus_station
 drawable layout_bus
+drawable nav_item_background
+drawable rounded_image_background
 id adminActions
 id bottom_nav
 id btnBack
@@ -53,12 +65,9 @@ id nav_create_route
 id nav_profile
 id nav_routes
 id nav_ticket
-id rbAdmin
-id rbCustomer
 id rbPrice120
 id rbPrice250
 id rgPrice
-id rgRole
 id rvBusList
 id showPass
 id showRePass
@@ -73,7 +82,6 @@ id tvStatus
 id tvTitle
 id tvTotalPrice
 id tvUserInfo
-id tvWelcome
 id txtDetailExpireDate
 id txtDetailPurchaseDate
 id txtDetailRouteCode

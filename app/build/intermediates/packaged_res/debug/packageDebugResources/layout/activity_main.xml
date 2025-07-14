@@ -21,12 +21,12 @@
                 android:id="@+id/tvAppTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bus Việt"
-                android:textSize="26sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"
+                android:layout_marginBottom="30dp"
                 android:gravity="center"
-                android:layout_marginBottom="12dp" />
+                android:text="BUS VIET"
+                android:textColor="@color/green_primary"
+                android:textSize="40sp"
+                android:textStyle="bold" />
 
             <!-- Logo bên dưới tiêu đề -->
             <ImageView
@@ -97,32 +97,11 @@
                     android:layout_marginTop="12dp"
                     android:backgroundTint="#AAA" />
 
-                <RadioGroup
-                    android:id="@+id/rgRole"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="12dp">
-
-                    <RadioButton
-                        android:id="@+id/rbCustomer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Khách hàng"
-                        android:checked="true" />
-
-                    <RadioButton
-                        android:id="@+id/rbAdmin"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Quản trị viên"
-                        android:layout_marginStart="16dp" />
-                </RadioGroup>
-
                 <Button
                     android:id="@+id/btnLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green_primary"
                     android:text="Đăng nhập / Đăng ký"
                     android:layout_marginTop="16dp" />
 
@@ -130,7 +109,7 @@
                     android:id="@+id/tvStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Đang kết nối... quý khách vui lòng đăng nhập"
+                    android:text="Nếu tài khoản chưa được tạo, chúng tôi sẽ taọ tài khoản mới giúp bạn"
                     android:textColor="#444"
                     android:layout_marginTop="16dp" />
             </LinearLayout>
