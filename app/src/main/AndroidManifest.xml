@@ -39,6 +39,9 @@
 
         <!-- Giao diện chính sau khi đăng nhập -->
         <activity android:name=".HomeActivity" />
+        <activity android:name=".UpdateUserActivity"/>
+        <activity android:name=".TicketDetailActivity" />
+
 
         <!--Acvitiy để trigger kết quả thanh toán từ app mobile banking
          khi mở lại activity này thì bạn cần kiểm tra trạng thái thanh toán của đơn hàng -->

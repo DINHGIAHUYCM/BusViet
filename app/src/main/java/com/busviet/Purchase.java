@@ -1,6 +1,9 @@
 package com.busviet;
 
-public class Purchase {
+import java.io.Serializable;
+
+
+public class Purchase implements Serializable {
     public String username;
     public String routeCode;
     public String ticketType; // "single", "daily", "monthly", "quarterly", "yearly"

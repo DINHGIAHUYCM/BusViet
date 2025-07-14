@@ -33,6 +33,9 @@ android {
 
 dependencies {
     implementation("com.google.firebase:firebase-database")
+
+    implementation("com.google.firebase:firebase-auth:22.3.0")
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

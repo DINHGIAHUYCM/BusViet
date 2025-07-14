@@ -8,6 +8,9 @@ import android.widget.*;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import android.content.Intent;
+import android.util.Log;
+
 
 import com.google.firebase.database.*;
 
@@ -342,7 +345,7 @@ public class TicketManagerFragment extends Fragment {
         int validTickets = 0;
         long totalSpent = 0;
         Map<String, Integer> typeCount = new HashMap<>();
-        
+
         for (Purchase purchase : purchases) {
             totalTickets += purchase.ticketCount;
             totalSpent += purchase.totalPrice;
@@ -384,59 +387,87 @@ public class TicketManagerFragment extends Fragment {
         LinearLayout ticketLayout = new LinearLayout(getContext());
         ticketLayout.setOrientation(LinearLayout.VERTICAL);
         ticketLayout.setPadding(16, 12, 16, 12);
-        
-        // Determine ticket status and color
+
         boolean isValid = purchase.isValidInCurrentMonth();
         int backgroundColor = isValid ? 0xFFE8F5E8 : 0xFFFFE8E8;
-        
         ticketLayout.setBackgroundColor(backgroundColor);
-        
+
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         params.setMargins(0, 8, 0, 8);
         ticketLayout.setLayoutParams(params);
-        
-        // Header with ticket type and status
+
         LinearLayout headerLayout = new LinearLayout(getContext());
         headerLayout.setOrientation(LinearLayout.HORIZONTAL);
-        
+
         TextView typeView = new TextView(getContext());
         typeView.setText(getTicketTypeDisplay(purchase.ticketType));
         typeView.setTextSize(16);
         typeView.setTextColor(0xFF333333);
         typeView.setTypeface(null, android.graphics.Typeface.BOLD);
-        typeView.setLayoutParams(new LinearLayout.LayoutParams(0, 
-            LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
-        
+        typeView.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
+
         TextView statusView = new TextView(getContext());
-        statusView.setText(isValid ? "✅ Còn hiệu lực" : "❌ Hết hạn");
+        statusView.setText(isValid ? "✅ Còn hiệu lực" : "❌ Hết hạn hoặc hết lượt sử dụng vé ");
         statusView.setTextSize(14);
         statusView.setTextColor(isValid ? 0xFF4CAF50 : 0xFFFF5722);
         statusView.setTypeface(null, android.graphics.Typeface.BOLD);
-        
+
         headerLayout.addView(typeView);
         headerLayout.addView(statusView);
-        
-        // Ticket details
+
         TextView detailsView = new TextView(getContext());
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault());
-        
         String details = "🚌 Tuyến: " + purchase.routeCode +
                 "\n🎫 Số lượng: " + purchase.ticketCount + " vé" +
                 "\n💰 Giá: " + NumberFormat.getCurrencyInstance(new Locale("vi", "VN")).format(purchase.totalPrice) +
                 "\n📅 Ngày mua: " + sdf.format(new Date(purchase.purchaseDate)) +
                 "\n⏰ Hết hạn: " + sdf.format(new Date(purchase.expireDate));
-        
         detailsView.setText(details);
         detailsView.setTextSize(13);
         detailsView.setTextColor(0xFF666666);
         detailsView.setPadding(0, 8, 0, 0);
-        
+
         ticketLayout.addView(headerLayout);
         ticketLayout.addView(detailsView);
-        
         container.addView(ticketLayout);
+
+        // 👉 Khi nhấn vào vé thì mở TicketDetailActivity
+        ticketLayout.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), TicketDetailActivity.class);
+            intent.putExtra("ticket", purchase);
+
+            final String routeCodeKey = purchase.routeCode.trim(); // loại bỏ khoảng trắng thừa
+
+            FirebaseDatabase.getInstance().getReference("bus")
+                    .orderByChild("routeCode")
+                    .equalTo(routeCodeKey)
+                    .addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            Bus bus = null;
+                            for (DataSnapshot busSnapshot : snapshot.getChildren()) {
+                                bus = busSnapshot.getValue(Bus.class);
+                                break; // chỉ lấy tuyến đầu tiên khớp
+                            }
+
+                            if (bus != null) {
+                                intent.putExtra("bus", bus); // Truyền tuyến vào Intent nếu tìm thấy
+                            }
+
+                            requireContext().startActivity(intent); // Luôn mở TicketDetailActivity
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            requireContext().startActivity(intent); // Fallback nếu lỗi
+                        }
+                    });
+        });
+
+
     }
+
 
     // HELPER METHODS
     private LinearLayout createStatsContainer(String title) {
