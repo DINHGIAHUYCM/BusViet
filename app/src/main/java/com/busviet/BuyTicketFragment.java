@@ -1,5 +1,5 @@
 package com.busviet;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,9 +8,7 @@ import android.widget.*;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import com.google.firebase.database.*;
-
 import java.text.NumberFormat;
 import java.util.*;
 
@@ -264,30 +262,85 @@ public class BuyTicketFragment extends Fragment {
             long currentTime = System.currentTimeMillis();
             long expireTime = calculateExpireDate(ticketType, currentTime);
             int totalPrice = ticketPrice * ticketCount;
-
             // Tạo purchase object
-            Purchase purchase = new Purchase(
+            VNPay.requestPaymentUrl(requireContext(), totalPrice, new VNPay.PaymentCallback() {
+                @Override
+                public void onSuccess(String paymentUrl) {
+
+                    Intent intent = new Intent(requireContext(), PaymentActivity.class);
+                    intent.putExtra("paymentUrl", paymentUrl);
+
+                    startActivityForResult(intent, 1234); // mở webview thanh toán
+                }
+
+                @Override
+                public void onFailure(String errorMessage) {
+                    Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_SHORT).show();
+                }
+            });
+
+
+
+
+        } catch (NumberFormatException e) {
+            tvStatus.setText("❌ Số lượng vé không hợp lệ");
+        }
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1234) {
+            if (resultCode == PaymentActivity.RESULT_OK) {
+                String countStr = etTicketCount.getText().toString().trim();
+                int ticketCount = countStr.isEmpty() ? 1 : Integer.parseInt(countStr);
+                int routePosition = spinnerRoute.getSelectedItemPosition();
+                Bus selectedBus = busList.get(routePosition);
+                int typePosition = spinnerTicketType.getSelectedItemPosition();
+                String ticketType = getTicketTypeKey(typePosition);
+                int ticketPrice = getTicketPrice(typePosition);
+                long currentTime = System.currentTimeMillis();
+                long expireTime = calculateExpireDate(ticketType, currentTime);
+                int totalPrice = ticketPrice * ticketCount;
+                savePurchaseToFirebase(
+                        username,
+                        selectedBus.routeCode,
+                        ticketType,
+                        ticketCount,
+                        currentTime,
+                        expireTime,
+                        totalPrice
+                );
+            } else {
+                Toast.makeText(requireContext(), "Thanh toán thất bại hoặc bị huỷ", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void savePurchaseToFirebase(
+            String username,
+            String routeCode,
+            String ticketType,
+            int ticketCount,
+            long purchaseTime,
+            long expireTime,
+            int totalPrice
+    ) {
+        Purchase purchase = new Purchase(
                 username,
-                selectedBus.routeCode,
+                routeCode,
                 ticketType,
                 ticketCount,
-                currentTime,
+                purchaseTime,
                 expireTime,
                 totalPrice,
                 true
-            );
+        );
 
-            // Lưu vào Firebase
-            String purchaseId = purchasesRef.push().getKey();
-            if (purchaseId != null) {
-                purchasesRef.child(purchaseId).setValue(purchase)
+        String purchaseId = purchasesRef.push().getKey();
+        if (purchaseId != null) {
+            purchasesRef.child(purchaseId).setValue(purchase)
                     .addOnSuccessListener(aVoid -> {
-                        tvStatus.setText("✅ Mua vé thành công! " + 
-                            "Tuyến " + selectedBus.routeCode + " - " +
-                            getTicketTypeName(typePosition) + " x" + ticketCount + 
-                            " = " + NumberFormat.getCurrencyInstance(new Locale("vi", "VN")).format(totalPrice));
-                        
-                        // Reset form
+                        tvStatus.setText("✅ Mua vé thành công!");
                         etTicketCount.setText("1");
                         spinnerTicketType.setSelection(0);
                         updateTotalPrice();
@@ -295,10 +348,6 @@ public class BuyTicketFragment extends Fragment {
                     .addOnFailureListener(e -> {
                         tvStatus.setText("❌ Lỗi mua vé: " + e.getMessage());
                     });
-            }
-
-        } catch (NumberFormatException e) {
-            tvStatus.setText("❌ Số lượng vé không hợp lệ");
         }
     }
 
