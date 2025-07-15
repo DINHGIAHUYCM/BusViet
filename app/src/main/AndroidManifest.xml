@@ -36,6 +36,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PaymentActivity" />
+        <activity android:name=".RegisterActivity" />
 
         <!-- Giao diện chính sau khi đăng nhập -->
         <activity android:name=".HomeActivity" />

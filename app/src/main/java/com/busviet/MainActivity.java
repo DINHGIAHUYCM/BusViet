@@ -10,48 +10,31 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.*;
 
+// MainActivity.java
 public class MainActivity extends AppCompatActivity {
-
     EditText etUsername, etPassword;
     Button btnLogin;
-    TextView tvStatus;
-    ImageView ivTogglePassword;
-
+    TextView tvStatus, tvGoToRegister;
     DatabaseReference usersRef;
-    boolean isPasswordVisible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
         tvStatus = findViewById(R.id.tvStatus);
-        ivTogglePassword = findViewById(R.id.ivTogglePassword);
-
+        tvGoToRegister = findViewById(R.id.tvGoToRegister);
         usersRef = FirebaseDatabase.getInstance().getReference("users");
 
-        ivTogglePassword.setOnClickListener(v -> {
-            isPasswordVisible = !isPasswordVisible;
-            if (isPasswordVisible) {
-                etPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                ivTogglePassword.setImageResource(R.drawable.ic_eye_open);
-            } else {
-                etPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                ivTogglePassword.setImageResource(R.drawable.ic_eye_closed);
-            }
-            etPassword.setSelection(etPassword.getText().length());
-        });
-
-        btnLogin.setOnClickListener(view -> {
+        btnLogin.setOnClickListener(v -> {
             String username = etUsername.getText().toString().trim();
             String password = etPassword.getText().toString().trim();
-            String role = "Customer"; // Mặc định
 
             if (username.isEmpty() || password.isEmpty()) {
-                tvStatus.setText("⚠️ Vui lòng nhập tài khoản và mật khẩu");
+                tvStatus.setText("⚠️ Nhập tài khoản và mật khẩu");
                 return;
             }
 
@@ -70,15 +53,7 @@ public class MainActivity extends AppCompatActivity {
                             tvStatus.setText("❌ Sai mật khẩu!");
                         }
                     } else {
-                        User newUser = new User(password, "", "", role);
-                        usersRef.child(username).setValue(newUser)
-                                .addOnSuccessListener(aVoid -> {
-                                    tvStatus.setText("✅ Tạo tài khoản mới với quyền Customer");
-                                })
-                                .addOnFailureListener(e -> {
-                                    tvStatus.setText("❌ Tạo tài khoản thất bại: " + e.getMessage());
-                                    Log.e("FIREBASE", "Tạo tài khoản thất bại", e);
-                                });
+                        tvStatus.setText("❌ Tài khoản không tồn tại.");
                     }
                 }
 
@@ -88,5 +63,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         });
+
+        tvGoToRegister.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, RegisterActivity.class));
+        });
     }
 }
+

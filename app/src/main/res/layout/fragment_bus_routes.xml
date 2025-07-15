@@ -2,26 +2,34 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient"
+    android:background="#FFFFFF"
     android:padding="16dp">
 
-    <!-- Tiêu đề -->
+    <!-- Tiêu đề đẹp hơn -->
     <TextView
-        android:text="Danh Sách Tuyến Xe Bus"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="🚌 Danh Sách Tuyến Xe Bus"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#007A33"
         android:gravity="center"
-        android:layout_marginBottom="16dp" />
+        android:padding="16dp"
+        android:background="#E9FCEF"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#E9FCEF"
+        android:elevation="2dp"
+        android:layout_marginTop="8dp" />
 
-    <!-- RecyclerView danh sách tuyến -->
+    <!-- RecyclerView đẹp hơn -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvBusList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:clipToPadding="false"
-        android:paddingBottom="16dp"
-        android:layout_marginTop="4dp" />
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="vertical" />
 </LinearLayout>
