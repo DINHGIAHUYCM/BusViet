@@ -45,6 +45,13 @@ public class ProfileFragment extends Fragment {
         loadUserInfo();
         setupLogoutButton();
 
+        Button btnEdit = view.findViewById(R.id.btnEditUser);
+
+        btnEdit.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), UpdateUserActivity.class);
+            intent.putExtra("username", username);
+            startActivity(intent);
+        });
         return view;
     }
 
@@ -56,7 +63,7 @@ public class ProfileFragment extends Fragment {
                 if (user != null) {
                     String info = "👤 Tài khoản: " + username +
                             "\n🔑 Vai trò: " + (role != null ? role : "Customer") +
-                            "\n📧 Email: " + (user.contact != null ? user.contact : "Chưa cập nhật") +
+                            "\n📧 Địa chỉ: " + (user.contact != null ? user.contact : "Chưa cập nhật") +
                             "\n📞 Số điện thoại: " + (user.phone != null ? user.phone : "Chưa cập nhật");
                     tvInfo.setText(info);
                 } else {
@@ -102,4 +109,5 @@ public class ProfileFragment extends Fragment {
             Toast.makeText(getContext(), "❌ Lỗi đăng xuất: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+
 }

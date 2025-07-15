@@ -12,11 +12,9 @@ import com.google.firebase.database.*;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText etUsername, etPassword, etContact, etPhone;
+    EditText etUsername, etPassword;
     Button btnLogin;
     TextView tvStatus;
-    RadioGroup rgRole;
-    RadioButton rbAdmin, rbCustomer;
     ImageView ivTogglePassword;
 
     DatabaseReference usersRef;
@@ -29,13 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
-        etContact = findViewById(R.id.etContact);
-        etPhone = findViewById(R.id.etPhone);
         btnLogin = findViewById(R.id.btnLogin);
         tvStatus = findViewById(R.id.tvStatus);
-        rgRole = findViewById(R.id.rgRole);
-        rbAdmin = findViewById(R.id.rbAdmin);
-        rbCustomer = findViewById(R.id.rbCustomer);
         ivTogglePassword = findViewById(R.id.ivTogglePassword);
 
         usersRef = FirebaseDatabase.getInstance().getReference("users");
@@ -44,10 +37,10 @@ public class MainActivity extends AppCompatActivity {
             isPasswordVisible = !isPasswordVisible;
             if (isPasswordVisible) {
                 etPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                ivTogglePassword.setImageResource(R.drawable.ic_eye_open); // icon mắt mở
+                ivTogglePassword.setImageResource(R.drawable.ic_eye_open);
             } else {
                 etPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                ivTogglePassword.setImageResource(R.drawable.ic_eye_closed); // icon mắt đóng
+                ivTogglePassword.setImageResource(R.drawable.ic_eye_closed);
             }
             etPassword.setSelection(etPassword.getText().length());
         });
@@ -55,9 +48,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(view -> {
             String username = etUsername.getText().toString().trim();
             String password = etPassword.getText().toString().trim();
-            String contact = etContact.getText().toString().trim();
-            String phone = etPhone.getText().toString().trim();
-            String role = rbAdmin.isChecked() ? "Admin" : "Customer";
+            String role = "Customer"; // Mặc định
 
             if (username.isEmpty() || password.isEmpty()) {
                 tvStatus.setText("⚠️ Vui lòng nhập tài khoản và mật khẩu");
@@ -72,17 +63,17 @@ public class MainActivity extends AppCompatActivity {
                         if (user != null && user.password.equals(password)) {
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                             intent.putExtra("username", username);
-                            intent.putExtra("role", user.role); // truyền role
+                            intent.putExtra("role", user.role);
                             startActivity(intent);
                             finish();
                         } else {
                             tvStatus.setText("❌ Sai mật khẩu!");
                         }
                     } else {
-                        User newUser = new User(password, contact, phone, role);
+                        User newUser = new User(password, "", "", role);
                         usersRef.child(username).setValue(newUser)
                                 .addOnSuccessListener(aVoid -> {
-                                    tvStatus.setText("✅ Đã tạo tài khoản mới với quyền " + role);
+                                    tvStatus.setText("✅ Tạo tài khoản mới với quyền Customer");
                                 })
                                 .addOnFailureListener(e -> {
                                     tvStatus.setText("❌ Tạo tài khoản thất bại: " + e.getMessage());
