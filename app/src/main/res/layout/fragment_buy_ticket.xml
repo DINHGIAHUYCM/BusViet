@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient">
+    android:background="#FFFFFF">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,133 +9,183 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Title -->
+        <!-- Tiêu đề -->
+
+        <!-- Form khung xanh nhạt -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="#E9FCEF"
+            android:backgroundTint="#E9FCEF"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:padding="16dp"
             android:text="🚌 Mua vé xe buýt"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:gravity="center"
-            android:padding="16dp"
-            android:layout_marginBottom="16dp" />
+            android:textColor="#007A33"
+            android:textSize="26sp"
+            android:textStyle="bold" />
 
-        <!-- Route Selection -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="🚍 Chọn tuyến xe:"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
-
-        <Spinner
-            android:id="@+id/spinnerRoute"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginBottom="16dp"
-            android:background="@android:drawable/btn_dropdown" />
-
-        <!-- Ticket Type Selection -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="🎫 Loại vé:"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
-
-        <Spinner
-            android:id="@+id/spinnerTicketType"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginBottom="16dp"
-            android:background="@android:drawable/btn_dropdown" />
-
-        <!-- Ticket Count -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="🔢 Số lượng vé:"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
-
-        <EditText
-            android:id="@+id/etTicketCount"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="1"
-            android:inputType="number"
-            android:textSize="16sp"
-            android:layout_marginBottom="16dp" />
-
-        <!-- Total Price -->
-        <TextView
-            android:id="@+id/tvTotalPrice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tổng tiền: 0 ₫"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/holo_red_dark"
-            android:gravity="center"
-            android:background="@android:color/black"
-            android:backgroundTint="#FFEEEE"
-            android:padding="16dp"
-            android:layout_marginBottom="24dp" />
-
-        <!-- Buy Button -->
-        <Button
-            android:id="@+id/btnBuyTicket"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="💳 MUA VÉ"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@android:color/holo_red_dark"
-            android:layout_marginBottom="16dp" />
-
-        <!-- Status Text -->
-        <TextView
-            android:id="@+id/tvStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="14sp"
-            android:gravity="center"
-            android:padding="8dp" />
-
-        <!-- Pricing Info -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@android:color/black"
-            android:backgroundTint="#F5F5F5"
+            android:background="#E9FCEF"
+            android:padding="20dp"
+            android:layout_marginBottom="24dp"
+            android:elevation="2dp"
+            android:backgroundTint="#E9FCEF"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="4dp">
+
+            <!-- Chọn tuyến -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🚍 Chọn tuyến xe:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="#007A33" />
+
+            <Spinner
+                android:id="@+id/spinnerRoute"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_input_box"
+                android:padding="8dp" />
+
+            <!-- Loại vé -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎫 Loại vé:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="#007A33" />
+
+            <Spinner
+                android:id="@+id/spinnerTicketType"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_input_box"
+                android:padding="8dp" />
+
+            <!-- Số lượng -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔢 Số lượng vé:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="#007A33" />
+
+            <EditText
+                android:id="@+id/etTicketCount"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="1"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:background="@drawable/bg_input_box"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Tổng tiền -->
+            <TextView
+                android:id="@+id/tvTotalPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tổng tiền: 0 ₫"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#D32F2F"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="#FFEBEE"
+                android:elevation="2dp" />
+
+            <!-- Nút mua vé -->
+            <Button
+                android:id="@+id/btnBuyTicket"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="💳 MUA VÉ"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#007A33"
+                android:elevation="2dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Trạng thái -->
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:gravity="center"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <!-- Bảng giá vé -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
             android:padding="16dp"
-            android:layout_marginTop="16dp">
+            android:elevation="2dp"
+            android:layout_marginBottom="32dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="💰 Bảng giá vé"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="@android:color/holo_red_dark"
-                android:layout_marginBottom="12dp" />
+                android:textColor="#007A33"
+                android:layout_marginBottom="12dp"
+                android:gravity="center" />
 
+            <!-- Giá từng loại -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="🎫 Vé lượt: 7,000₫/lần\n🌅 Vé ngày: 20,000₫/ngày\n📅 Vé tháng: 140,000₫/tháng\n📆 Vé quý: 400,000₫/quý\n🗓️ Vé năm: 1,500,000₫/năm"
+                android:text="🎫 Vé lượt:     7,000₫/lượt"
                 android:textSize="14sp"
-                android:lineSpacingExtra="4dp" />
-
+                android:layout_marginBottom="4dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌅 Vé ngày:     20,000₫/ngày"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📅 Vé tháng:     140,000₫/tháng"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📆 Vé quý:       400,000₫/quý"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🗓️ Vé năm:      1,500,000₫/năm"
+                android:textSize="14sp" />
         </LinearLayout>
-
     </LinearLayout>
-
 </ScrollView>

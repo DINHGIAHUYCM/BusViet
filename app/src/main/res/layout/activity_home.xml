@@ -14,10 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@color/light_green_background"
+        android:elevation="0dp"
         app:itemIconTint="@color/nav_item_color"
         app:itemTextColor="@color/nav_item_color"
-        app:itemBackground="@drawable/nav_item_background"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_menu" />
-
+        app:menu="@menu/bottom_nav_menu"
+        app:itemBackground="@android:color/transparent" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
