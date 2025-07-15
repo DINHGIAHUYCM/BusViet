@@ -2,25 +2,29 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient"
-    android:fillViewport="false">
+    android:background="#FFFFFF"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <!-- Title -->
+        <!-- Tiêu đề với bo góc và màu xanh nhạt -->
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="🎫 Quản lý vé"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:gravity="center"
-            android:padding="24dp" />
+            android:textColor="#007A33"
+            android:background="@drawable/bg_title_box"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center" />
 
         <!-- Content Container -->
         <LinearLayout
@@ -29,7 +33,5 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingBottom="32dp" />
-
     </LinearLayout>
-
 </ScrollView>
