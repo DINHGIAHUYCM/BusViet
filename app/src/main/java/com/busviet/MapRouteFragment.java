@@ -114,8 +114,8 @@ public class MapRouteFragment extends Fragment implements OnMapReadyCallback {
     private void updateEmptyViewVisibility() {
         // Kiểm tra null để tránh crash
         if (getView() == null) {
-            // Nếu view chưa sẵn sàng, thử lại sau 6 giây
-            new Handler(Looper.getMainLooper()).postDelayed(this::updateEmptyViewVisibility, 6000);
+            // Nếu view chưa sẵn sàng, thử lại sau 3 giây
+            new Handler(Looper.getMainLooper()).postDelayed(this::updateEmptyViewVisibility, 3000);
             return;
         }
         View emptyView = getView().findViewById(R.id.emptyView);
