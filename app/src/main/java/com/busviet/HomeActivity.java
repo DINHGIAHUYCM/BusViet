@@ -23,9 +23,11 @@ public class HomeActivity extends AppCompatActivity {
         username = getIntent().getStringExtra("username");
         role = getIntent().getStringExtra("role");
 
-        // Hiển thị menu "Tạo tuyến" nếu là Admin
+        // Logic hiển thị menu theo role (chỉ 1 trong 2 hiển thị)
         if ("Admin".equals(role)) {
-            bottomNav.getMenu().findItem(R.id.nav_create_route).setVisible(true);
+            bottomNav.getMenu().findItem(R.id.nav_create_route).setTitle("Tạo tuyến");
+        } else if ("Customer".equals(role)) {
+            bottomNav.getMenu().findItem(R.id.nav_create_route).setTitle("Tìm tuyến");
         }
 
         // Fragment đầu tiên
@@ -53,9 +55,12 @@ public class HomeActivity extends AppCompatActivity {
                 fragment = new BusRoutesFragment();
             } else if (itemId == R.id.nav_ticket) {
                 fragment = new TicketManagerFragment();
-            } else if (itemId == R.id.nav_create_route) {
+            } else if (itemId == R.id.nav_create_route && "Admin".equals(role)) {
                 fragment = new CreateRouteFragment(); // mở fragment tạo tuyến
+            } else if (itemId == R.id.nav_create_route && "Customer".equals(role)) {
+                fragment = new MapRouteFragment(); // mở fragment tạo tuyến
             }
+
 
             if (fragment != null) {
                 fragment.setArguments(args);
