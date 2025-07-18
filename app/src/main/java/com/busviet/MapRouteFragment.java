@@ -295,7 +295,6 @@ public class MapRouteFragment extends Fragment implements OnMapReadyCallback {
         TextView tvBusName = view.findViewById(R.id.tvBusName);
         TextView tvRoute = view.findViewById(R.id.tvRoute);
         TextView tvStops = view.findViewById(R.id.tvStops);
-        TextView tvPrice = view.findViewById(R.id.tvPrice);
         Button btnShowMap = view.findViewById(R.id.btnShowMap);
 
         tvBusName.setText("Bus: " + route.getBusNumber());

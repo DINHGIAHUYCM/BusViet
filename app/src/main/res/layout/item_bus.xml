@@ -26,15 +26,6 @@
         android:layout_marginTop="4dp" />
 
     <TextView
-        android:id="@+id/tvPrice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Giá vé"
-        android:textSize="16sp"
-        android:textColor="#333333"
-        android:layout_marginTop="2dp" />
-
-    <TextView
         android:id="@+id/tvStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

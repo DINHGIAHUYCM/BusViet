@@ -2,8 +2,14 @@ package com.busviet;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.*;
-import android.widget.*;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Switch;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -14,8 +20,6 @@ import com.google.firebase.database.FirebaseDatabase;
 public class CreateRouteFragment extends Fragment {
 
     private EditText etRouteCode, etStartPoint, etEndPoint;
-    private RadioGroup rgPrice;
-    private RadioButton rbPrice120, rbPrice250;
     private Switch switchActive;
     private Button btnCreate;
 
@@ -30,9 +34,6 @@ public class CreateRouteFragment extends Fragment {
         etRouteCode = view.findViewById(R.id.etRouteCode);
         etStartPoint = view.findViewById(R.id.etStartPoint);
         etEndPoint = view.findViewById(R.id.etEndPoint);
-        rgPrice = view.findViewById(R.id.rgPrice);
-        rbPrice120 = view.findViewById(R.id.rbPrice120);
-        rbPrice250 = view.findViewById(R.id.rbPrice250);
         switchActive = view.findViewById(R.id.switchActive);
         btnCreate = view.findViewById(R.id.btnCreate);
 
@@ -54,15 +55,7 @@ public class CreateRouteFragment extends Fragment {
             return;
         }
 
-        int price = 0;
-        if (rbPrice120.isChecked()) {
-            price = 120000;
-        } else if (rbPrice250.isChecked()) {
-            price = 250000;
-        } else {
-            Toast.makeText(getContext(), "Vui lòng chọn mệnh giá vé", Toast.LENGTH_SHORT).show();
-            return;
-        }
+        int price = 250000;
 
         String key = busRef.push().getKey();
         Bus bus = new Bus(key, routeCode, startPoint, endPoint, price, active);

@@ -30,13 +30,6 @@
         android:text="Số trạm"
         android:layout_marginBottom="4dp" />
 
-    <TextView
-        android:id="@+id/tvPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Giá vé"
-        android:layout_marginBottom="12dp" />
-
     <Button
         android:id="@+id/btnShowMap"
         android:layout_width="match_parent"

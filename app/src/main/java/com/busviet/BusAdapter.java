@@ -71,7 +71,6 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
             super(itemView);
             tvRouteCode = itemView.findViewById(R.id.tvRouteCode);
             tvRoute = itemView.findViewById(R.id.tvRoute);
-            tvPrice = itemView.findViewById(R.id.tvPrice);
             tvStatus = itemView.findViewById(R.id.tvStatus);
             btnEdit = itemView.findViewById(R.id.btnEdit);
             btnDelete = itemView.findViewById(R.id.btnDelete);
