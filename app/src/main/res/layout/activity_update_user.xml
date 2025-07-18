@@ -69,7 +69,31 @@
             android:layout_marginBottom="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+    <!-- Nút mở/ẩn phần đổi mật khẩu -->
+        <TextView
+            android:text="Đổi mật khẩu"
+            android:textColor="#007A33"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/btnTogglePasswordFields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đổi mật khẩu"
+        android:textColor="#007A33"
+        android:background="@drawable/btn_outline_green"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Khu vực nhập mật khẩu, ẩn mặc định -->
+    <LinearLayout
+        android:id="@+id/passwordSection"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <!-- Mật khẩu mới -->
         <TextView
             android:text="Mật khẩu mới"
@@ -133,6 +157,7 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp" />
         </LinearLayout>
+    </LinearLayout>
 
         <!-- Nút cập nhật -->
         <Button
