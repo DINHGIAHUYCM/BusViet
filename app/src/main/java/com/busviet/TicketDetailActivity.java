@@ -35,6 +35,13 @@ public class TicketDetailActivity extends AppCompatActivity {
         // Nhận dữ liệu từ Intent
         ticket = (Purchase) getIntent().getSerializableExtra("ticket");
 
+        Button btnRipeTicket = findViewById(R.id.btnRipeTicket);
+        if (ticket != null && "single".equalsIgnoreCase(ticket.ticketType)) {
+            btnRipeTicket.setVisibility(Button.VISIBLE); // Hiện nút nếu là vé lượt
+        } else {
+            btnRipeTicket.setVisibility(Button.GONE); // Ẩn nút nếu không phải vé lượt
+        }
+
         Bus bus = (Bus) getIntent().getSerializableExtra("bus");
 
 
@@ -74,7 +81,7 @@ public class TicketDetailActivity extends AppCompatActivity {
         Button btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> finish());
 
-        Button btnRipeTicket = findViewById(R.id.btnRipeTicket);
+
         btnRipeTicket.setOnClickListener(v -> ripTicket());
     }
 
