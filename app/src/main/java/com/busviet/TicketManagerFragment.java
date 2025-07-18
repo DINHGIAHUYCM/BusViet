@@ -1,5 +1,6 @@
 package com.busviet;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -471,7 +472,12 @@ public class TicketManagerFragment extends Fragment {
 
     // HELPER METHODS
     private LinearLayout createStatsContainer(String title) {
-        LinearLayout container = new LinearLayout(getContext());
+        Context context = getContext();
+        if (context == null) {
+            Log.e("TicketManager", "Context is null in createStatsContainer()");
+            return new LinearLayout(requireActivity()); // fallback nếu context null
+        }
+        LinearLayout container = new LinearLayout(context);
         container.setOrientation(LinearLayout.VERTICAL);
         container.setPadding(24, 16, 24, 16);
         container.setBackgroundColor(0xFFF9F9F9);

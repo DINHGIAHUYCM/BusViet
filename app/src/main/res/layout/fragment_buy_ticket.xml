@@ -160,7 +160,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="🎫 Vé lượt:     7,000₫/lượt"
+                android:text="🎫 Vé lượt:     10,000₫/lượt"
                 android:textSize="14sp"
                 android:layout_marginBottom="4dp" />
             <TextView

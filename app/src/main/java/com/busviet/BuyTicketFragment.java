@@ -23,7 +23,7 @@ public class BuyTicketFragment extends Fragment {
     private List<Bus> busList;
 
     // Pricing theo yêu cầu
-    private static final int PRICE_SINGLE = 7000;    // 7k/lượt
+    private static final int PRICE_SINGLE = 10000;    // 7k/lượt
     private static final int PRICE_DAILY = 20000;    // 20k/ngày  
     private static final int PRICE_MONTHLY = 140000; // 140k/tháng
     private static final int PRICE_QUARTERLY = 400000; // 400k/quý
@@ -67,7 +67,7 @@ public class BuyTicketFragment extends Fragment {
 
     private void setupTicketTypeSpinner() {
         String[] ticketTypes = {
-            "🎫 Vé lượt (7,000₫)",
+            "🎫 Vé lượt (10,000₫)",
             "🌅 Vé ngày (20,000₫)", 
             "📅 Vé tháng (140,000₫)",
             "📆 Vé quý (400,000₫)",
