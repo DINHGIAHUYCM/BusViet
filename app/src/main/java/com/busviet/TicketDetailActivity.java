@@ -108,7 +108,9 @@ public class TicketDetailActivity extends AppCompatActivity {
 
                                         if (found != null
                                                 && found.routeCode.equals(ticket.routeCode)
-                                                && found.ticketType.equals(ticket.ticketType)) {
+                                                && found.ticketType.equals(ticket.ticketType)
+                                                && found.expireDate == ticket.expireDate
+                                                && found.totalPrice == ticket.totalPrice) {
 
                                             DatabaseReference targetRef = ticketSnapshot.getRef();
 
