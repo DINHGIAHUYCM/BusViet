@@ -41,7 +41,6 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
         Bus bus = busList.get(position);
         holder.tvRouteCode.setText("Mã tuyến: " + bus.routeCode);
         holder.tvRoute.setText(bus.startPoint + " ➜ " + bus.endPoint);
-        holder.tvPrice.setText("Giá vé: " + bus.ticketPrice + "đ");
         holder.tvStatus.setText("Trạng thái: " + (bus.active ? "Hoạt động" : "Ngừng"));
 
         if ("Admin".equals(role)) {
