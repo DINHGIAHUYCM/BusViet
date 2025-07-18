@@ -389,7 +389,7 @@ public class TicketManagerFragment extends Fragment {
         ticketLayout.setOrientation(LinearLayout.VERTICAL);
         ticketLayout.setPadding(16, 12, 16, 12);
 
-        boolean isValid = purchase.isValidInCurrentMonth();
+        boolean isValid = purchase.isValidInCurrentMonth() && purchase.ticketCount > 0;
         int backgroundColor = isValid ? 0xFFE8F5E8 : 0xFFFFE8E8;
         ticketLayout.setBackgroundColor(backgroundColor);
 
@@ -435,6 +435,11 @@ public class TicketManagerFragment extends Fragment {
 
         // 👉 Khi nhấn vào vé thì mở TicketDetailActivity
         ticketLayout.setOnClickListener(v -> {
+            if (!isValid) {
+                Toast.makeText(getContext(), "Vé không còn hiệu lực", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             Intent intent = new Intent(getContext(), TicketDetailActivity.class);
             intent.putExtra("ticket", purchase);
 
@@ -465,6 +470,7 @@ public class TicketManagerFragment extends Fragment {
                         }
                     });
         });
+
 
 
     }
