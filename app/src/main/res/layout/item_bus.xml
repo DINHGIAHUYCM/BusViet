@@ -49,32 +49,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="✏️ Sửa"
-            android:textColor="#007A33"
-            android:backgroundTint="#C8F7DC"
+            android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
             android:background="@drawable/btn_rounded_green"
-            android:textAllCaps="false" />
+        android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="🗑️ Xóa"
-            android:textColor="#D32F2F"
-            android:backgroundTint="#FFEBEE"
-            android:background="@drawable/btn_rounded_red"
-            android:layout_marginStart="8dp"
-            android:textAllCaps="false" />
+            android:textColor="#FFFFFF"
+        android:backgroundTint="#F44336"
+        android:background="@drawable/btn_rounded_red"
+        android:layout_marginStart="8dp"
+        android:textAllCaps="false" />
+
     </LinearLayout>
 
     <!-- Nút mua vé -->
-    <Button
-        android:id="@+id/btnBuy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="💳 Mua vé"
-        android:layout_marginTop="12dp"
-        android:visibility="gone"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#007A33"
-        android:textAllCaps="false" />
+<!--    <Button-->
+<!--        android:id="@+id/btnBuy"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="💳 Mua vé"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:visibility="gone"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:backgroundTint="#007A33"-->
+<!--        android:textAllCaps="false" />-->
 </LinearLayout>

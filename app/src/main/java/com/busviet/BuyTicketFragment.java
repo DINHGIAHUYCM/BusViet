@@ -82,10 +82,13 @@ public class BuyTicketFragment extends Fragment {
 
     private void loadBusRoutes() {
         tvStatus.setText("🔄 Đang tải danh sách tuyến...");
-        
+
         busesRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                // Không làm gì nếu fragment chưa attach hoặc context null
+                if (!isAdded() || getContext() == null) return;
+
                 busList = new ArrayList<>();
                 List<String> routeDisplayList = new ArrayList<>();
 
@@ -97,30 +100,31 @@ public class BuyTicketFragment extends Fragment {
                             String routeDisplay = bus.routeCode + " - " + bus.startPoint + " → " + bus.endPoint;
                             routeDisplayList.add(routeDisplay);
                         } else {
-                            // Fallback: lấy từng field
                             String routeCode = busSnapshot.child("routeCode").getValue(String.class);
                             String startPoint = busSnapshot.child("startPoint").getValue(String.class);
                             String endPoint = busSnapshot.child("endPoint").getValue(String.class);
-                            
+
                             if (routeCode != null && startPoint != null && endPoint != null) {
                                 Bus newBus = new Bus();
                                 newBus.id = busSnapshot.getKey();
                                 newBus.routeCode = routeCode;
                                 newBus.startPoint = startPoint;
                                 newBus.endPoint = endPoint;
-                                newBus.ticketPrice = busSnapshot.child("ticketPrice").getValue(Integer.class) != null ? 
-                                    busSnapshot.child("ticketPrice").getValue(Integer.class) : 10000;
+                                newBus.ticketPrice = busSnapshot.child("ticketPrice").getValue(Integer.class) != null ?
+                                        busSnapshot.child("ticketPrice").getValue(Integer.class) : 10000;
                                 newBus.active = true;
-                                
+
                                 busList.add(newBus);
                                 String routeDisplay = routeCode + " - " + startPoint + " → " + endPoint;
                                 routeDisplayList.add(routeDisplay);
                             }
                         }
                     } catch (Exception e) {
-                        // Bỏ qua nếu có lỗi
+                        // ignore parse errors
                     }
                 }
+
+                if (!isAdded() || getContext() == null) return; // kiểm tra lần nữa trước khi update UI
 
                 if (routeDisplayList.isEmpty()) {
                     routeDisplayList.add("Chưa có tuyến nào");
@@ -129,8 +133,11 @@ public class BuyTicketFragment extends Fragment {
                     tvStatus.setText("✅ Đã tải " + routeDisplayList.size() + " tuyến xe");
                 }
 
-                ArrayAdapter<String> routeAdapter = new ArrayAdapter<>(getContext(), 
-                    android.R.layout.simple_spinner_item, routeDisplayList);
+                ArrayAdapter<String> routeAdapter = new ArrayAdapter<>(
+                        requireContext(), // dùng requireContext() ở đây vì ta đã kiểm tra
+                        android.R.layout.simple_spinner_item,
+                        routeDisplayList
+                );
                 routeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerRoute.setAdapter(routeAdapter);
 
@@ -139,10 +146,13 @@ public class BuyTicketFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                tvStatus.setText("❌ Lỗi tải tuyến: " + error.getMessage());
+                if (tvStatus != null) {
+                    tvStatus.setText("❌ Lỗi tải tuyến: " + error.getMessage());
+                }
             }
         });
     }
+
 
     private void setupEventListeners() {
         spinnerRoute.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

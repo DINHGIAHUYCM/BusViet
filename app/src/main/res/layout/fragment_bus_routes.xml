@@ -1,11 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false">
 
-    <!-- Tiêu đề đẹp hơn -->
+    <!-- Tiêu đề -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,20 +19,20 @@
         android:gravity="center"
         android:padding="16dp"
         android:background="#E9FCEF"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#E9FCEF"
-        android:elevation="2dp"
-        android:layout_marginTop="8dp" />
+        android:elevation="2dp" />
 
-    <!-- RecyclerView đẹp hơn -->
+    <!-- RecyclerView danh sách tuyến -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvBusList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
-        android:padding="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="8dp"
-        android:scrollbars="vertical" />
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="96dp"
+    android:scrollbars="vertical" />
 </LinearLayout>

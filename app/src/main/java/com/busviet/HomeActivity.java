@@ -25,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
 
         // Logic hiển thị menu theo role (chỉ 1 trong 2 hiển thị)
         if ("Admin".equals(role)) {
+            bottomNav.getMenu().findItem(R.id.nav_ticket).setVisible(false);
             bottomNav.getMenu().findItem(R.id.nav_create_route).setTitle("Tạo tuyến");
         } else if ("Customer".equals(role)) {
             bottomNav.getMenu().findItem(R.id.nav_create_route).setTitle("Tìm tuyến");

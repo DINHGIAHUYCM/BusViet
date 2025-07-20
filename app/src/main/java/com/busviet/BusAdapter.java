@@ -45,14 +45,11 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
 
         if ("Admin".equals(role)) {
             holder.adminActions.setVisibility(View.VISIBLE);
-            holder.btnBuy.setVisibility(View.GONE);
 
             holder.btnEdit.setOnClickListener(v -> listener.onEdit(bus));
             holder.btnDelete.setOnClickListener(v -> listener.onDelete(bus));
         } else {
             holder.adminActions.setVisibility(View.GONE);
-            holder.btnBuy.setVisibility(View.VISIBLE);
-            holder.btnBuy.setOnClickListener(v -> listener.onBuy(bus));
         }
     }
 
@@ -63,7 +60,7 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
 
     public static class BusViewHolder extends RecyclerView.ViewHolder {
         TextView tvRouteCode, tvRoute, tvPrice, tvStatus;
-        Button btnEdit, btnDelete, btnBuy;
+        Button btnEdit, btnDelete;
         LinearLayout adminActions;
 
         public BusViewHolder(@NonNull View itemView) {
@@ -73,7 +70,7 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
             tvStatus = itemView.findViewById(R.id.tvStatus);
             btnEdit = itemView.findViewById(R.id.btnEdit);
             btnDelete = itemView.findViewById(R.id.btnDelete);
-            btnBuy = itemView.findViewById(R.id.btnBuy);
+//            btnBuy = itemView.findViewById(R.id.btnBuy);
             adminActions = itemView.findViewById(R.id.adminActions);
         }
     }
